@@ -54,12 +54,12 @@ void AlignmentMonitorGeneric::book()
 
   m_trkHists.resize(6, 0);
 
-  m_trkHists[0] = new TH1F("pt"  , "track p_{t} (GeV)" , nBin_,   0.0, 10.0);
+  m_trkHists[0] = new TH1F("pt"  , "track p_{t} (GeV)" , nBin_,   0.0,100.0);
   m_trkHists[1] = new TH1F("eta" , "track #eta"        , nBin_, - 3.0,  3.0);
   m_trkHists[2] = new TH1F("phi" , "track #phi"        , nBin_, -M_PI, M_PI);
-  m_trkHists[3] = new TH1F("d0"  , "track d0 (cm)"     , nBin_, - 0.1,  0.1);
-  m_trkHists[4] = new TH1F("dz"  , "track dz (cm)"     , nBin_, -10.0, 10.0);
-  m_trkHists[5] = new TH1F("chi2", "track #chi^{2}/dof", nBin_,   0.0, 10.0);
+  m_trkHists[3] = new TH1F("d0"  , "track d0 (cm)"     , nBin_, -0.02, 0.02);
+  m_trkHists[4] = new TH1F("dz"  , "track dz (cm)"     , nBin_, -20.0, 20.0);
+  m_trkHists[5] = new TH1F("chi2", "track #chi^{2}/dof", nBin_,   0.0, 20.0);
 
   for (unsigned int h = 0; h < m_trkHists.size(); ++h)
     m_trkHists[h] = static_cast<TH1F*>( add("/iterN/", m_trkHists[h]) );
