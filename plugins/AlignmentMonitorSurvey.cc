@@ -8,7 +8,7 @@
 //
 // Original Author:  Nhan Tran
 //         Created:  10/8/07
-// $Id: AlignmentMonitorSurvey.cc,v 1.1 2007/09/06 16:24:02 ntran Exp $
+// $Id: AlignmentMonitorSurvey.cc,v 1.2 2007/10/23 07:12:29 fronga Exp $
 //
 
 #include "Alignment/CommonAlignmentMonitor/interface/AlignmentMonitorPluginFactory.h"
@@ -24,8 +24,8 @@
 #include "Alignment/CommonAlignment/interface/SurveyDet.h"
 #include "Alignment/CommonAlignment/interface/Alignable.h"
 #include "CondFormats/Alignment/interface/SurveyErrors.h"
-#include "CondFormats/AlignmentRecord/interface/TrackerSurveyRcd.h"
-#include "CondFormats/AlignmentRecord/interface/TrackerSurveyErrorRcd.h"
+#include "CondFormats/DataRecord/interface/TrackerSurveyRcd.h"
+#include "CondFormats/DataRecord/interface/TrackerSurveyErrorRcd.h"
 
 #include "TTree.h"
 
