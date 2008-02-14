@@ -1,0 +1,13 @@
+block AlignmentMonitorMuonResidualsDefaults = {
+    string outpath = "./"
+    bool collectorActive = false
+    int32 collectorNJobs = 0
+    string collectorPath = "./"
+    
+    uint32 xresid_bins = 200  double xresid_low = -5  double xresid_high = 5
+    uint32 xmean_bins = 400   double xmean_low = -1   double xmean_high = 1
+    uint32 xstdev_bins = 300  double xstdev_low = 0   double xstdev_high = 3
+    uint32 yresid_bins = 200  double yresid_low = -5  double yresid_high = 5
+    uint32 ymean_bins = 400   double ymean_low = -1   double ymean_high = 1
+    uint32 ystdev_bins = 300  double ystdev_low = 0   double ystdev_high = 3
+}

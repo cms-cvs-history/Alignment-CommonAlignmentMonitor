@@ -1,0 +1,6 @@
+block AlignmentMonitorMuonPositionsDefaults = {
+    string outpath = "./"
+    bool collectorActive = false
+    int32 collectorNJobs = 0
+    string collectorPath = "./"
+}
