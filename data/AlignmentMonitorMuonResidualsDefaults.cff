@@ -1,8 +1,11 @@
 block AlignmentMonitorMuonResidualsDefaults = {
-    uint32 xresid_bins = 200  double xresid_low = -5  double xresid_high = 5
-    uint32 xmean_bins = 400   double xmean_low = -1   double xmean_high = 1
-    uint32 xstdev_bins = 300  double xstdev_low = 0   double xstdev_high = 3
-    uint32 yresid_bins = 200  double yresid_low = -5  double yresid_high = 5
-    uint32 ymean_bins = 400   double ymean_low = -1   double ymean_high = 1
-    uint32 ystdev_bins = 300  double ystdev_low = 0   double ystdev_high = 3
+    bool tracker_hists = false
+    uint32 xresid_bins = 200  double xresid_low = -50  double xresid_high = 50
+    uint32 xmean_bins = 400   double xmean_low = -10   double xmean_high = 10
+    uint32 xstdev_bins = 300  double xstdev_low = 0   double xstdev_high = 30
+    uint32 xerronmean_bins = 300  double xerronmean_low = 0   double xerronmean_high = 1
+    uint32 yresid_bins = 200  double yresid_low = -50  double yresid_high = 50
+    uint32 ymean_bins = 400   double ymean_low = -10   double ymean_high = 10
+    uint32 ystdev_bins = 300  double ystdev_low = 0   double ystdev_high = 30
+    uint32 yerronmean_bins = 300  double yerronmean_low = 0   double yerronmean_high = 1
 }
