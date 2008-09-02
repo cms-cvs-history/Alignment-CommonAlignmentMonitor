@@ -12,16 +12,18 @@
 
 // system include files
 #include "Alignment/CommonAlignmentMonitor/interface/AlignmentMonitorPluginFactory.h"
+#include "Alignment/CommonAlignmentMonitor/interface/AlignmentMonitorBase.h"
+
 #include "FWCore/ParameterSet/interface/ParameterSet.h" 
 #include <DataFormats/GeometrySurface/interface/LocalError.h> 
 #include "TH1.h" 
 #include "TObject.h" 
-#include "Alignment/CommonAlignmentMonitor/interface/AlignmentMonitorBase.h"
 #include "TrackingTools/TrackFitters/interface/TrajectoryStateCombiner.h"
 
 #include "DataFormats/MuonDetId/interface/MuonSubdetId.h"
 #include "FWCore/MessageLogger/interface/MessageLogger.h"
 
+#include "Alignment/CommonAlignment/interface/AlignmentParameters.h"
 #include "Alignment/MuonAlignment/interface/AlignableDTWheel.h"
 #include "Alignment/MuonAlignment/interface/AlignableDTChamber.h"
 #include "Alignment/MuonAlignment/interface/AlignableCSCStation.h"
