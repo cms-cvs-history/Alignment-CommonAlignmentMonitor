@@ -13,7 +13,7 @@
 //
 // Original Author:  Jim Pivarski
 //         Created:  Sat Apr 26 12:36:13 CDT 2008
-// $Id: AlignmentMonitorAsAnalyzer.cc,v 1.8 2012/07/12 14:51:53 yana Exp $
+// $Id: AlignmentMonitorAsAnalyzer.cc,v 1.4 2010/01/04 15:36:54 mussgill Exp $
 //
 //
 
@@ -73,7 +73,6 @@ class AlignmentMonitorAsAnalyzer : public edm::EDAnalyzer {
       // ----------member data ---------------------------
       edm::InputTag m_tjTag;
       edm::ParameterSet m_aliParamStoreCfg;
-  const edm::ParameterSet m_pSet;
 
       AlignableTracker *m_alignableTracker;
       AlignableMuon *m_alignableMuon;
@@ -98,8 +97,7 @@ class AlignmentMonitorAsAnalyzer : public edm::EDAnalyzer {
 //
 AlignmentMonitorAsAnalyzer::AlignmentMonitorAsAnalyzer(const edm::ParameterSet& iConfig)
    : m_tjTag(iConfig.getParameter<edm::InputTag>("tjTkAssociationMapTag"))
-     , m_aliParamStoreCfg(iConfig.getParameter<edm::ParameterSet>("ParameterStore")),
-     m_pSet(iConfig)
+   , m_aliParamStoreCfg(iConfig.getParameter<edm::ParameterSet>("ParameterStore"))
    , m_alignableTracker(NULL)
    , m_alignableMuon(NULL)
    , m_alignmentParameterStore(NULL)
@@ -141,7 +139,7 @@ AlignmentMonitorAsAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSe
       edm::ESHandle<GeometricDet> theGeometricDet;
       iSetup.get<IdealGeometryRecord>().get( theGeometricDet );
       TrackerGeomBuilderFromGeometricDet trackerBuilder;
-      boost::shared_ptr<TrackerGeometry> theTracker(trackerBuilder.build(&(*theGeometricDet), m_pSet ));
+      boost::shared_ptr<TrackerGeometry> theTracker(trackerBuilder.build(&(*theGeometricDet)));
       
       edm::ESHandle<MuonDDDConstants> mdc;
       iSetup.get<MuonNumberingRecord>().get(mdc);
